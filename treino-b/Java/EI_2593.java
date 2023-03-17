@@ -17,7 +17,7 @@ public class EI_2593 {
         Integer quantidadeDePalavras = Integer.parseInt(scanner.nextLine());
 
         //System.out.println("Por favor, digite as palavras: ");
-		String palavrasString = scanner.nextLine();
+	String palavrasString = scanner.nextLine();
         String[] palavras = palavrasString.split(" ");
 
         printaPosicoesDasPalavras(texto, palavras, quantidadeDePalavras);
