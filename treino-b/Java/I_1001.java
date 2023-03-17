@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Main {
+public class I_1001 {
 	
 	int somaNumeros(int X, int Y){
 		int resultado = X + Y;
@@ -9,10 +9,11 @@ public class Main {
 	}
 	
     public static void main(String[] args) throws IOException {
-    	Main soma = new Main();
+    	I_1001 soma = new I_1001();
     	Scanner sc = new Scanner(System.in);
     	int X = sc.nextInt();
     	int Y = sc.nextInt();
+		sc.close();
     	System.out.println("X = " + soma.somaNumeros(X, Y));
  
     }
