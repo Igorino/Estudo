@@ -25,7 +25,7 @@ public class EI_2593 {
  
     public static void achaEPrintaPosicoesDaPalavra(String texto, String palavraOld) {
         List<Integer> resultado = new ArrayList<>();
-        String palavra =String.format(" %s ", palavraOld); 
+        String palavra = String.format(" %s ", palavraOld); 
 
         for (int i = 0; i < texto.length() - palavra.length(); i++) {
             for (int j = 0; j < palavra.length(); j++) {
