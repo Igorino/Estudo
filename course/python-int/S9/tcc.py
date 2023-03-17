@@ -1,6 +1,6 @@
 import re
 
-'''A funcao le os valores dos tracos linguisticos do modelo e devolve uma assinatura a ser comparada com os textos fornecidos'''
+'''Essa funcao le os valores dos tracos linguisticos do modelo e devolve uma assinatura a ser comparada com os textos fornecidos'''
 def le_assinatura():
     print("Bem-vindo ao detector automático de COH-PIAH.")
     print("Informe a assinatura típica de um aluno infectado:")
@@ -14,7 +14,7 @@ def le_assinatura():
 
     return [wal, ttr, hlr, sal, sac, pal]
 
-'''A funcao le todos os textos a serem comparados e devolve uma lista contendo cada texto como um elemento'''
+'''Essa funcao le todos os textos a serem comparados e devolve uma lista contendo cada texto como um elemento'''
 def le_textos():
     i = 1
     textos = []
@@ -26,18 +26,18 @@ def le_textos():
 
     return textos
 
-'''A funcao recebe um texto e devolve uma lista das sentencas dentro do texto'''
+'''Essa funcao recebe um texto e devolve uma lista das sentencas dentro do texto'''
 def separa_sentencas(texto):
     sentencas = re.split(r'[.!?]+', texto)
     if sentencas[-1] == '':
         del sentencas[-1]
     return sentencas
 
-'''A funcao recebe uma sentenca e devolve uma lista das frases dentro da sentenca'''
+'''Essa funcao recebe uma sentenca e devolve uma lista das frases dentro da sentenca'''
 def separa_frases(sentenca):
     return re.split(r'[,:;]+', sentenca)
 
-'''A funcao recebe uma frase e devolve uma lista das palavras dentro da frase'''
+'''Essa funcao recebe uma frase e devolve uma lista das palavras dentro da frase'''
 def separa_palavras(frase):
     return frase.split()
 
