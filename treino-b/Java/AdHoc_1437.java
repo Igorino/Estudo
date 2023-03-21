@@ -5,7 +5,7 @@ public class AdHoc_1437 {
  
     public static void main(String[] args) throws IOException {
  
-        Integer numeroDeComandos = -1;
+        int numeroDeComandos = -1;
         String direcaoFinal;
 
         Scanner scan = new  Scanner(System.in);
@@ -21,10 +21,10 @@ public class AdHoc_1437 {
         scan.close();
     }
  
-    public static String devolvePonteiroDaDirecao(Integer numeroDeComandos, String comandos) {
+    public static String devolvePonteiroDaDirecao(int numeroDeComandos, String comandos) {
 
         String[] listaDeDirecoes = {"N", "L", "S", "O"};
-        Integer ponteiro = 0;
+        int ponteiro = 0;
         char comandoAtual = ' ';
         char[] comandosChar = comandos.toCharArray();
 
@@ -32,12 +32,12 @@ public class AdHoc_1437 {
             comandoAtual = comandosChar[i];
             if (comandoAtual == 'E') {
                 if (ponteiro == 0) {
-                    ponteiro = comandosChar.length;
+                    ponteiro = listaDeDirecoes.length-1;
                 } else {
                     ponteiro--;
                 }
             } else if (comandoAtual == 'D'){
-                if (ponteiro == 4) {
+                if (ponteiro == 3) {
                     ponteiro = 0;
                 } else {
                     ponteiro++;
