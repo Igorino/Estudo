@@ -3,20 +3,28 @@ import java.util.Scanner;
 
 public class AdHoc_2473 {
  
+    public static class Numeros {
+        public int[] numerosJogados = new int[6];
+        public int[] numerosSorteados = new int[6];
+
+        public Numeros() {
+            Scanner scan = new Scanner(System.in);
+            for (int i = 0; i < 6; i++) {
+                numerosJogados[i] = scan.nextInt();
+            }   
+            for (int i = 0; i < 6; i++) {
+                numerosSorteados[i] = scan.nextInt();
+            } 
+            scan.close();
+        }
+    }
     public static void main(String[] args) throws IOException {
-        Scanner scan = new Scanner(System.in);
         int quantidadeDeAcertos = 0;
-        int[] numerosJogados = new int[6];
-        int[] numerosSorteados = new int[6];;
+        
+        Numeros numeros = new Numeros();
+
         for (int i = 0; i < 6; i++) {
-            numerosJogados[i] = scan.nextInt();
-        }   
-        for (int i = 0; i < 6; i++) {
-            numerosSorteados[i] = scan.nextInt();
-        }   
-        scan.close();
-        for (int i = 0; i < 6; i++) {
-            if (temNoArray(numerosSorteados, numerosJogados[i]))
+            if (temNoArray(numeros.numerosSorteados, numeros.numerosJogados[i]))
                 quantidadeDeAcertos++;
         }   
         switch (quantidadeDeAcertos) {
