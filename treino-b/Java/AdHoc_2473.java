@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class AdHoc_2473 {
  
-    public static class Numeros {
+    public class Numeros {
         public int[] numerosJogados = new int[6];
         public int[] numerosSorteados = new int[6];
 
@@ -20,8 +20,9 @@ public class AdHoc_2473 {
     }
     public static void main(String[] args) throws IOException {
         int quantidadeDeAcertos = 0;
-        
-        Numeros numeros = new Numeros();
+
+        AdHoc_2473 outer = new AdHoc_2473();
+        Numeros numeros = outer.new Numeros();
 
         for (int i = 0; i < 6; i++) {
             if (temNoArray(numeros.numerosSorteados, numeros.numerosJogados[i]))
